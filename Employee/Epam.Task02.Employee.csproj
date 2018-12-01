@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{98FC07A0-F726-456F-8B80-1324F6164658}</ProjectGuid>
+    <ProjectGuid>{D8621A89-EE21-4AB4-A5CD-428F05477D19}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Epam.Task02.Round</RootNamespace>
-    <AssemblyName>Epam.Task02.Round</AssemblyName>
+    <RootNamespace>Employee</RootNamespace>
+    <AssemblyName>Employee</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Point.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Round.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Epam.Task02.User\Epam.Task02.User.csproj">
+      <Project>{1291cfed-718c-4ee3-975f-945d6546a085}</Project>
+      <Name>Epam.Task02.User</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -43,15 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bonus.cs" />
-    <Compile Include="GameBarrier.cs" />
-    <Compile Include="GameMovable.cs" />
+    <Compile Include="Bonus\Apple.cs" />
+    <Compile Include="GameMovable\Bear.cs" />
+    <Compile Include="Bonus\Bonus.cs" />
+    <Compile Include="GameBarrier\GameBarrier.cs" />
+    <Compile Include="GameMovable\GameMovable.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="IGameMovable.cs" />
     <Compile Include="IGameObject.cs" />
+    <Compile Include="GameMovable\Monster.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GameBarrier\Stone.cs" />
+    <Compile Include="GameBarrier\Tree.cs" />
+    <Compile Include="GameBarrier\Wall.cs" />
+    <Compile Include="GameMovable\User.cs" />
+    <Compile Include="GameMovable\Wolf.cs" />
+    <Compile Include="Bonus\RottenTangerin.cs" />
+    <Compile Include="Bonus\Strawberry.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

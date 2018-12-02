@@ -29,7 +29,6 @@ namespace Epam.Task02.Round
                 result = double.TryParse(Console.ReadLine(), out n);
                 Test(n, result);
                 round.Center.Y = n;
-
             }
 
             Console.WriteLine($"Area: {round.GetArea,2:f}{Environment.NewLine}" +

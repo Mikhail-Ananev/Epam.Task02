@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Epam.Task02.Game
 {
-    public interface IGameObject
+    public class Tree : GameBarrier
     {
-        Point Position { get; }
+        public override void Draw()
+        {
+            Console.WriteLine($"Tree:{Position.X}, {Position.Y}");
+        }
     }
 }

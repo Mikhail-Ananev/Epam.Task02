@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyString
 {
-    class MyString
+    public class MyString
     {
-        public int Capacity { get; set; }
-        public int MyLength { get; set; }
         private char[] charArray;
 
         public MyString()
@@ -24,45 +22,10 @@ namespace MyString
             this.Capacity = charArray.Length;
             this.charArray = charArray;
         }
-        private char[] MakeNewCharArray()
-        {
-            char[] newCharArray = new char[this.Capacity * 2];
-            newCharArray = CopyPaste(newCharArray, this.charArray);
-            this.Capacity = newCharArray.Length;
-            return newCharArray;
-        }
 
-        private char[] CopyPaste(char[] charArray1, char[] charArray2)
-        {
-            
-            for (int i = 0; i < charArray2.Length; i++)
-            {
-                charArray1[i] = charArray2[i];
-            }
-            return charArray1;
-        }
+        public int Capacity { get; set; }
 
-        public char[] Append(params char[] add)
-        {
-            if (add != null)
-            {
-                while (this.MyLength + add.Length > this.Capacity)
-                {
-                    this.charArray = MakeNewCharArray();
-                }
-                AddToCharArray(this.charArray, add);
-            }
-            return this.charArray;
-        }
-        private char[] AddToCharArray(char[] charArray, char[] add)
-        {
-            for (int i = MyLength; i < MyLength + add.Length; i++)
-            {
-                charArray[i] = add[i - MyLength];
-            }
-            this.MyLength += add.Length;
-            return charArray;
-        }
+        public int MyLength { get; set; }
 
         public char this[int index]
         {
@@ -79,17 +42,19 @@ namespace MyString
             {
                 Console.Write(charArray[i]);
             }
+
             Console.WriteLine();
         }
+
         public static void Show(char[] charArray)
         {
             for (int i = 0; i < charArray.Length; i++)
             {
                 Console.Write(charArray[i]);
             }
+
             Console.WriteLine();
         }
-
 
         public static char[] Concat(char[] charArray1, char[] charArray2)
         {
@@ -106,8 +71,10 @@ namespace MyString
                     newCharArray[i] = charArray1[i];
                 }
             }
+
             return newCharArray;
         }
+
         public static char[] Concat(char[] charArray1, char[] charArray2, char[] charArray3)
         {
             long finalLength = charArray1.Length + charArray2.Length + charArray3.Length;
@@ -124,15 +91,16 @@ namespace MyString
                     {
                         newCharArray[i] = charArray2[i - charArray1.Length];
                     }
-
                 }
                 else
                 {
                     newCharArray[i] = charArray1[i];
                 }
             }
+
             return newCharArray;
         }
+
         public static char[] MyStringToCharArray(MyString myString)
         {
             char[] convert = new char[myString.MyLength];
@@ -140,8 +108,10 @@ namespace MyString
             {
                 convert[i] = myString[i];
             }
+
             return convert;
         }
+
         public static MyString CharArrayToMyString(char[] charString)
         {
             MyString myString = new MyString(charString);
@@ -154,14 +124,17 @@ namespace MyString
             {
                 return true;
             }
+
             if (string1 == null || string2 == null)
             {
                 return false;
             }
+
             if (string1.Length != string2.Length)
             {
                 return false;
             }
+
             for (int i = 0; i < string1.Length; i++)
             {
                 if (string1[i] != string2[i])
@@ -169,6 +142,7 @@ namespace MyString
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -178,6 +152,7 @@ namespace MyString
             {
                 return -1;
             }
+
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] == symbol)
@@ -185,14 +160,17 @@ namespace MyString
                     return i;
                 }
             }
+
             return -1;
         }
+
         public static int LastIndex(char[] array, char symbol)
         {
             if (array == null)
             {
                 return -1;
             }
+
             for (int i = array.Length - 1; i > -1; i--)
             {
                 if (array[i] == symbol)
@@ -200,8 +178,52 @@ namespace MyString
                     return i;
                 }
             }
+
             return -1;
         }
 
+        public char[] Append(params char[] add)
+        {
+            if (add != null)
+            {
+                while (this.MyLength + add.Length > this.Capacity)
+                {
+                    this.charArray = this.MakeNewCharArray();
+                }
+
+                this.AddToCharArray(this.charArray, add);
+            }
+
+            return this.charArray;
+        }
+
+        private char[] MakeNewCharArray()
+        {
+            char[] newCharArray = new char[this.Capacity * 2];
+            newCharArray = this.CopyPaste(newCharArray, this.charArray);
+            this.Capacity = newCharArray.Length;
+            return newCharArray;
+        }
+
+        private char[] CopyPaste(char[] charArray1, char[] charArray2)
+        {
+            for (int i = 0; i < charArray2.Length; i++)
+            {
+                charArray1[i] = charArray2[i];
+            }
+
+            return charArray1;
+        }
+
+        private char[] AddToCharArray(char[] charArray, char[] add)
+        {
+            for (int i = this.MyLength; i < this.MyLength + add.Length; i++)
+            {
+                charArray[i] = add[i - this.MyLength];
+            }
+
+            this.MyLength += add.Length;
+            return charArray;
+        }
     }
 }

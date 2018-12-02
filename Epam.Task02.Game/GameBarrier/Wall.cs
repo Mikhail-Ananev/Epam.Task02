@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Epam.Task02.Game
 {
-    public interface IGameObject
+    public class Wall : GameBarrier
     {
-        Point Position { get; }
+        public override void Draw()
+        {
+            Console.WriteLine($"Wall:{Position.X}, {Position.Y}");
+        }
     }
 }

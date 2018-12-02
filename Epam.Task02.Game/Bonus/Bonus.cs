@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Epam.Task02.Round
+namespace Epam.Task02.Game
 {
-    public abstract class Shape : IVectorGraficsEditor
+    public abstract class Bonus : GameObject
     {
-        public abstract void Show(Point p);
+        public abstract int SkillBonus();
     }
 }

@@ -10,30 +10,29 @@ namespace Epam.Task02.Game
     {
         public Point Position
         {
-            get => Position;
+            get => this.Position;
             set
             {
-                if (value.X > Program.mapWidth && value.X < 0)
+                if (value.X > Program.MapWidth && value.X < 0)
                 {
                     throw new ArgumentException("Incorrect coordinate:", nameof(value.X));
                 }
                 else
                 {
-                    Position.X = value.X;
+                    this.Position.X = value.X;
                 }
-                if (value.Y > Program.mapHeight && value.Y < 0)
+
+                if (value.Y > Program.MapHeight && value.Y < 0)
                 {
                     throw new ArgumentException("Incorrect coordinate:", nameof(value.Y));
                 }
                 else
                 {
-                    Position.Y = value.Y;
+                    this.Position.Y = value.Y;
                 }
             }
         }
 
         public abstract void Draw();
     }
-
-
 }

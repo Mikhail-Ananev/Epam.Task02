@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Epam.Task02.Game
 {
-    interface IGameMovable
+    public interface IGameMovable
     {
         void Move();
     }

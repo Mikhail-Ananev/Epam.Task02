@@ -18,7 +18,7 @@ namespace User
             {
                 if (value > this.Age - 14)
                 {
-                    throw new ArgumentException("Experience can`t be more than 'Age' minus 14 years!",nameof(value));
+                    throw new ArgumentException("Experience can`t be more than 'Age' minus 14 years!", nameof(value));
                 }
 
                 this.experience = value;
@@ -34,6 +34,7 @@ namespace User
                 {
                     throw new ArgumentException("Work position can`t be empty!", nameof(value));
                 }
+
                 this.position = value;
             }
         }

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Epam.Task02.Round
+namespace Epam.Task02.Game
 {
-    interface IVectorGraficsEditor
+    public abstract class Monster : GameMovable
     {
-        void Show(Point drawingCoordinate);
+        public abstract void Shout();
     }
 }

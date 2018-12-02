@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Epam.Task02.Round
 {
-    public abstract class Shape : IVectorGraficsEditor
+    public interface IVectorGraficsEditor
     {
-        public abstract void Show(Point p);
+        void Show(Point drawingCoordinate);
     }
 }

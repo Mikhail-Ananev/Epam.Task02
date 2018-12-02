@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MyString
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        protected static void Main(string[] args)
         {
             MyString myString = new MyString("First string".ToCharArray());
             MyString.Show(myString);
@@ -35,7 +35,6 @@ namespace MyString
             MyString.Show(charString);
             Console.WriteLine($"First index 'i':{MyString.FirstIndex(charString, 'i')}{Environment.NewLine}" +
                               $"Last index 'y':{MyString.LastIndex(charString, 'y')}");
-
         }
     }
 }

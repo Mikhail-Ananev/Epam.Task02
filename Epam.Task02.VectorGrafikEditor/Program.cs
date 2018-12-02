@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Epam.Task02.Round
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        protected static void Main(string[] args)
         {
             var coordinate = new Random();
             Point center = new Point();

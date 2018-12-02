@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Epam.Task02.Game
 {
-    class Program
+    public class Program
     {
-        public const int mapWidth = 200;
-        public const int mapHeight = 100;
+        public const int MapWidth = 200;
+        public const int MapHeight = 100;
 
-
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var rand = new Random();
             Console.WriteLine("Hello! It`s your first game! Congratulations!");

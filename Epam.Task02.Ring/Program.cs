@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Epam.Task02.Round
 {
-    class Program
+    public class Program
     {
-        protected static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Input outer radius:");
             double outer;
@@ -18,7 +18,6 @@ namespace Epam.Task02.Round
             double inner;
             result = double.TryParse(Console.ReadLine(), out inner);
             Test(inner, result);
-
 
             Ring ring = new Ring(outer, inner);
             Console.WriteLine("If you want enter the coordinates of the center - press 'y':");

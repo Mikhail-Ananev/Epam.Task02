@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Epam.Task02.Round
 {
-    class Ring
+    public class Ring
     {
         private Point center = new Point();
         private Round innerRound = new Round();
@@ -18,43 +18,49 @@ namespace Epam.Task02.Round
             {
                 throw new ArgumentException("Incorrect inner and outer radius value");
             }
-            innerRound.Radius = inner;
-            outerRound.Radius = outer;
+
+            this.innerRound.Radius = inner;
+            this.outerRound.Radius = outer;
         }
+
         public double InnerRadius
         {
-            get => innerRound.Radius;
+            get => this.innerRound.Radius;
             set
             {
-                if (value >= outerRound.Radius)
+                if (value >= this.outerRound.Radius)
                 {
-                    throw new ArgumentException("Inner radius must be smaller than outer radius",nameof(innerRound.Radius));
+                    throw new ArgumentException("Inner radius must be smaller than outer radius", nameof(this.innerRound.Radius));
                 }
-                innerRound.Radius = value;
+
+                this.innerRound.Radius = value;
             }
         }
+
         public double OuterRadius
         {
-            get => outerRound.Radius;
+            get => this.outerRound.Radius;
             set
             {
-                if (value <= innerRound.Radius)
+                if (value <= this.innerRound.Radius)
                 {
-                    throw new ArgumentException("Outer radius must be bigger than inner radius", nameof(outerRound.Radius));
+                    throw new ArgumentException("Outer radius must be bigger than inner radius", nameof(this.outerRound.Radius));
                 }
-                innerRound.Radius = value;
+
+                this.innerRound.Radius = value;
             }
         }
 
         public double RingArea
         {
-            get => outerRound.GetArea - innerRound.GetArea;
+            get => this.outerRound.GetArea - this.innerRound.GetArea;
         }
 
         public double RingLength
         {
-            get => outerRound.GetLength + innerRound.GetLength;
+            get => this.outerRound.GetLength + this.innerRound.GetLength;
         }
+
         internal Point Center { get => this.center; set => this.center = value; }
     }
 }

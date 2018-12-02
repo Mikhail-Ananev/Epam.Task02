@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Shapes\Circle.cs" />
+    <Compile Include="Shapes\Line.cs" />
+    <Compile Include="Shapes\NewRound.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shapes\Rectangle.cs" />
+    <Compile Include="Shapes\Ring.cs" />
     <Compile Include="Shape.cs" />
-    <Compile Include="VectorGrafikEditor.cs" />
+    <Compile Include="IVectorGrafikEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -57,5 +62,6 @@
       <Name>Epam.Task02.Round</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

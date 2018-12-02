@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace User
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var employee1 = new Employee()
             {

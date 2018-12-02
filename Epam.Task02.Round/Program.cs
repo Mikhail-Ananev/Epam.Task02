@@ -24,9 +24,12 @@ namespace Epam.Task02.Round
                 Console.WriteLine("Input X:");
                 result = double.TryParse(Console.ReadLine(), out n);
                 Test(n, result);
+                round.Center.X = n;
                 Console.WriteLine("Input Y:");
                 result = double.TryParse(Console.ReadLine(), out n);
                 Test(n, result);
+                round.Center.Y = n;
+
             }
 
             Console.WriteLine($"Area: {round.GetArea,2:f}{Environment.NewLine}" +
